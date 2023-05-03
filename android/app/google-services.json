@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "578658414893",
+    "project_id": "weightloser-84e17",
+    "storage_bucket": "weightloser-84e17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578658414893:android:3a2d4ffe29511b9a9463a4",
+        "android_client_info": {
+          "package_name": "com.weightloser.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578658414893-ng82nc37s3e24kbi035csojoa7p21t2s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.weightloser.app",
+            "certificate_hash": "3bcb97f952942ec2bf6d4017b4a8c37936c9e50b"
+          }
+        },
+        {
+          "client_id": "578658414893-7ikfb1e316lpsmc7tjr87e99co0lf578.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHveeicHW5tEsCkzpxKInBaDEHnmR4hZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578658414893-7ikfb1e316lpsmc7tjr87e99co0lf578.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
