@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/Questions_screen/used-Questions/curent_height.dart';
+
 class HieghtScreen extends StatefulWidget {
   const HieghtScreen({Key key}) : super(key: key);
 
@@ -42,7 +44,7 @@ class _HieghtScreenState extends State<HieghtScreen> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
+                                const Text(
                                   'Biology',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
@@ -286,7 +288,10 @@ class _HieghtScreenState extends State<HieghtScreen> {
               height: height * 0.08,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>  select_current_weight(),));
+              },
               child: Container(
                 height: height * 0.07,
                 width: width * 0.6,
@@ -304,7 +309,7 @@ class _HieghtScreenState extends State<HieghtScreen> {
             ),
 
             SizedBox(
-              height: height * 0.06,
+              height: height * 0.08,
             ),
             // lınear progress ındıcators
             Row(

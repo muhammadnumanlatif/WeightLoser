@@ -175,7 +175,6 @@ class _LoginScreenState extends State<LoginScreen> {
       return false;
     }
   }
-
   @override
   Widget build(BuildContext context) {
     heigh = MediaQuery.of(context).size.height - kToolbarHeight;
@@ -198,33 +197,30 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
-
                     SizedBox(
-                      height: heigh * 0.1,
+                      height: heigh * .08,
                     ),
-
                     SizedBox(
-                      height: 0.06,
-                      width: width,
+                      height: heigh*0.05,
                       child: Image.asset(
                         'assets/images/weightchopper.png',
                       ),
                     ),
-                    SizedBox(height: heigh * 0.05),
+                    SizedBox(height: heigh * 0.02),
                     Text(
                       'Welcome Back!',
                       style: TextStyle(
                           fontSize: heigh * 0.04, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: heigh * 0.04),
+                    SizedBox(height: heigh * 0.01),
                     Text(
                       'Enter your details below',
                       style: lightText18Px.copyWith(
                           fontWeight: FontWeight.w500, fontSize: 19),
                     ),
-                    SizedBox(height: heigh * 0.08),
+                    SizedBox(height: heigh * 0.03),
                     CustomFormFields.formFieldWithoutIcon(
+
                       controller: _emailController,
                       hint: 'Email*',
                       errorText:
@@ -249,7 +245,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                       keyboardType: TextInputType.name,
                     ),
-                    SizedBox(height: heigh * 0.04),
+                    SizedBox(height: heigh * 0.01),
                     CustomFormFields.formFieldWithoutIcon(
                       suffixIcon: isObscure
                           ? GestureDetector(
@@ -308,11 +304,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     SizedBox(height: heigh * 0.06),
-
                     /// this is login button
                     _loginButton(),
-                    SizedBox(height: heigh * 0.02),
-
+                    SizedBox(height: heigh * 0.03),
                     /// do you have and account field
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -338,18 +332,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     SizedBox(height: heigh * 0.06),
-
                     ///  or text field
                     _orContanerText(),
-                    SizedBox(height: heigh * 0.05),
-
+                    SizedBox(height: heigh * 0.06),
                     /// google and facebook button
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         /// signInWithGoogle
                         _googleSignInButton(),
-
                         /// signinWithFacebookAndGoogle
                         _facebookSignInButton(),
                       ],
@@ -363,7 +354,6 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
   Widget _loginButton() {
     return InkWell(
       onTap: () {
@@ -435,7 +425,6 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
   Widget signinWithFacebookAndGoogle() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -481,7 +470,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
 //if (Platform.isAndroid)
-        /// thiis is google signin
+        /// this is google signin
         InkWell(
           onTap: () async {
             bool isOnline = await hasNetwork();
@@ -574,7 +563,6 @@ class _LoginScreenState extends State<LoginScreen> {
       ],
     );
   }
-
   /// this is sign in with facebooke
   Widget _facebookSignInButton() {
     return InkWell(
@@ -640,7 +628,6 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
   /// this is sign in with google
   Widget _googleSignInButton() {
     return InkWell(
@@ -704,7 +691,6 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
   /// this is or container text widget
   Widget _orContanerText() {
     return Row(
@@ -712,44 +698,36 @@ class _LoginScreenState extends State<LoginScreen> {
       children: [
         Container(
           height: heigh * 0.002,
-          width: width * 0.38,
+          width: width * 0.36,
           decoration: BoxDecoration(color: Colors.black12),
         ),
         FittedBox(child: Text('  or  ')),
         Container(
           height: heigh * 0.002,
-          width: width * 0.38,
+          width: width * 0.36,
           decoration: BoxDecoration(color: Colors.black12),
         )
       ],
     );
   }
-
   Future<String> signInWithGoogle() async {
     final FirebaseAuth _auth = FirebaseAuth.instance;
     final GoogleSignIn googleSignIn = GoogleSignIn();
-
     final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
     final GoogleSignInAuthentication googleSignInAuthentication =
-        await googleSignInAccount.authentication;
-
+    await googleSignInAccount.authentication;
     final AuthCredential credential = GoogleAuthProvider.credential(
       accessToken: googleSignInAuthentication.accessToken,
       idToken: googleSignInAuthentication.idToken,
     );
-
     final authResult = await _auth.signInWithCredential(credential);
     final User user = authResult.user;
-
     assert(!user.isAnonymous);
     assert(await user.getIdToken() != null);
-
     final User currentUser = await _auth.currentUser;
     assert(user.uid == currentUser.uid);
-
     return 'signInWithGoogle succeeded: $user';
   }
-
   Widget _checkGoogleSignIn() {
     return ElevatedButton(
         onPressed: () async {

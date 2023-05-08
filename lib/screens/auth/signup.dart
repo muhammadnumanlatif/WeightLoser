@@ -799,18 +799,14 @@ import 'forgot_password_screen.dart';
 //     }
 //   }
 // }
-
 /// this is mudasar  ui calss
-
 class SignUpScreen extends StatefulWidget {
   SignUpScreen();
 
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
 }
-
 bool isObscure = true;
-
 class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -820,7 +816,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   String _pwd = '';
   double heigh;
   double width;
-
   @override
   void initState() {
     // _emailController.text = "Shabby123";
@@ -962,29 +957,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(height: heigh * 0.05),
                     SizedBox(
-                      height: heigh * 0.04,
-                    ),
-                    SizedBox(
-                      height: 0.06,
-                      width: width,
+                      height: heigh*0.05,
                       child: Image.asset(
                         'assets/images/weightchopper.png',
                       ),
                     ),
-                    SizedBox(height: heigh * 0.05),
+                    SizedBox(height: heigh * 0.02),
                     Text(
                       'Getting Started',
                       style: TextStyle(
                           fontSize: heigh * 0.04, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: heigh * 0.04),
+                    SizedBox(height: heigh * 0.02),
                     Text(
                       'Promotion Line, Action Line',
                       style: lightText18Px.copyWith(
                           fontWeight: FontWeight.w500, fontSize: 19),
                     ),
-                    SizedBox(height: heigh * 0.08),
+                    SizedBox(height: heigh * 0.04),
                     // Name TextFormField
                     CustomFormFields.formFieldWithoutIcon(
                       controller: _emailController,
@@ -1011,7 +1003,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       },
                       keyboardType: TextInputType.name,
                     ),
-                    SizedBox(height: heigh * 0.02),
+                    SizedBox(height: heigh * 0.01),
                     // Email TextFormFeild
                     CustomFormFields.formFieldWithoutIcon(
                       controller: _emailController,
@@ -1038,7 +1030,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       },
                       keyboardType: TextInputType.name,
                     ),
-                    SizedBox(height: heigh * 0.02),
+                    SizedBox(height: heigh * 0.01),
                     // this is password formField
                     CustomFormFields.formFieldWithoutIcon(
                       suffixIcon: isObscure
@@ -1100,7 +1092,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     SizedBox(height: heigh * 0.02),
                     /// this is login button
                     _loginButton(),
-                    SizedBox(height: heigh * 0.02),
+                    SizedBox(height: heigh * 0.01),
                     /// do you have and account field
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -1433,7 +1425,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget _googleSignInButton() {
     return InkWell(
       onTap: () async {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => LScreen(),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>  ForgotPasswordScreen(),));
         // bool isOnline = await hasNetwork();
         // if (isOnline) {
         //   if (_firebaseAuth.currentUser == null) {
@@ -1500,13 +1492,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
       children: [
         Container(
           height: heigh * 0.002,
-          width: width * 0.38,
+          width: width * 0.36,
           decoration: BoxDecoration(color: Colors.black12),
         ),
         FittedBox(child: Text('  or  ')),
         Container(
           height: heigh * 0.002,
-          width: width * 0.38,
+          width: width * 0.36,
           decoration: BoxDecoration(color: Colors.black12),
         )
       ],

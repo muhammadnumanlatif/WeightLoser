@@ -14,7 +14,11 @@ import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:weight_loser/constants/payments.dart';
+
 import 'package:weight_loser/screens/Questions_screen/providers/all_questions_provider.dart';
+import 'package:weight_loser/screens/Questions_screen/used-Questions/birth_date.dart';
+import 'package:weight_loser/screens/Questions_screen/used-Questions/do_you_know.dart';
+import 'package:weight_loser/screens/Questions_screen/used-Questions/goal_weight_screen.dart';
 import 'package:weight_loser/screens/about_us/aboutUs.dart';
 import 'package:weight_loser/screens/auth/forgot_password_screen.dart';
 import 'package:weight_loser/screens/exercise_screens/RunningTab.dart';
@@ -341,11 +345,11 @@ class _MyAppState extends State<MyApp> {
         // home: YoYoEffect(),
         // home: PaymentScreen(),
         // home: BuildingPlan(),
-        home:    WelcomeScreen(),
+        home: const  WelcomeScreen(),
         routes: {
-          '/today': (_) => TodayScreen(),
-          routename.diet: (_) => DietTabView(),
-          routename.mind: (_) => MindTabView(),
+          '/today': (_) => const TodayScreen(),
+          routename.diet: (_) => const DietTabView(),
+          routename.mind: (_) => const MindTabView(),
           routename.exercise: (_) => RunningTabView(),
         },
         // home: ChooseMethod(),

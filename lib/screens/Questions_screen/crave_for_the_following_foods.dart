@@ -11,7 +11,7 @@ import 'package:weight_loser/utils/ImagePath.dart';
 import 'package:weight_loser/widget/dialog.dart';
 import 'package:weight_loser/widget/question_Header.dart';
 
-import 'body_type.dart';
+import 'gender_quistion_screen.dart';
 import 'dislike_food.dart';
 import 'used-Questions/i_eat_more_than_normal_when_i_am_stressed.dart';
 import 'used-Questions/goal_weight_screen.dart';

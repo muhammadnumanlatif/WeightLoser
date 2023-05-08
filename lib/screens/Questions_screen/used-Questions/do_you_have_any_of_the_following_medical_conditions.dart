@@ -345,11 +345,11 @@ class _DoYouHaveFollowingMedicalConditionsState
                       Container(
                           width: mobile ? Get.width * .6 : Get.width * .3,
                           height: 40,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: primaryColor,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(40.0))),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Next",
                               style: buttonStyle,

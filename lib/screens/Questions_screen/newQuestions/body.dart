@@ -27,7 +27,7 @@ import 'package:weight_loser/screens/Questions_screen/newQuestions/restaurant.da
 import 'package:weight_loser/screens/Questions_screen/newQuestions/sleep.dart';
 import 'package:weight_loser/screens/Questions_screen/newQuestions/sleepHours.dart';
 import 'package:weight_loser/screens/Questions_screen/newQuestions/thinkingFood.dart';
-import 'package:weight_loser/screens/Questions_screen/newQuestions/water.dart';
+import 'package:weight_loser/screens/Questions_screen/newQuestions/select_your_daily_normal_daily_waterIntake_screen.dart';
 import 'package:weight_loser/screens/Questions_screen/newQuestions/weight.dart';
 import 'package:weight_loser/screens/Questions_screen/providers/all_questions_provider.dart';
 import 'package:weight_loser/screens/Questions_screen/providers/questions_provider.dart';

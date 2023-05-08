@@ -7,7 +7,7 @@ import 'package:weight_loser/theme/TextStyles.dart';
 import 'package:weight_loser/utils/ImagePath.dart';
 import 'package:weight_loser/widget/question_Header.dart';
 
-import 'body_type.dart';
+import 'gender_quistion_screen.dart';
 
 class SleepMsg extends StatefulWidget {
   SignUpBody signUpBody;

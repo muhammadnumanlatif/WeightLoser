@@ -7,14 +7,14 @@ import 'package:weight_loser/Service/Responsive.dart';
 import 'package:weight_loser/constants/constant.dart';
 import 'package:weight_loser/screens/Questions_screen/used-Questions/do_you_know.dart';
 import 'package:weight_loser/screens/Questions_screen/membership_gym.dart';
-import 'package:weight_loser/screens/Questions_screen/type_of_exercise.dart';
+
 import 'package:weight_loser/screens/Questions_screen/used-Questions/weight_screen.dart';
 import 'package:weight_loser/theme/TextStyles.dart';
 import 'package:weight_loser/utils/ImagePath.dart';
 import 'package:weight_loser/widget/dialog.dart';
 import 'package:weight_loser/widget/question_Header.dart';
 
-import '../../mudasar/height_screen.dart';
+import '../../mudasar/current_weight_screen.dart';
 import 'dislike_food.dart';
 import 'used-Questions/goal_weight_screen.dart';
 import 'how_much_move_day.dart';
@@ -252,6 +252,7 @@ class _TypesOfBodyState extends State<TypesOfBody> {
 }
 
 /// Thıs ıs gender screen
+/// thıs is not in use
 // class GenderScreen extends StatefulWidget {
 //   const GenderScreen({Key key}) : super(key: key);
 //

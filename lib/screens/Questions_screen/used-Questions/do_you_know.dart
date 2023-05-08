@@ -10,6 +10,7 @@ import 'package:weight_loser/theme/TextStyles.dart';
 import 'package:weight_loser/utils/ImagePath.dart';
 import 'package:weight_loser/widget/question_Header.dart';
 
+import '../gender_quistion_screen.dart';
 import 'do_you_have_any_of_the_following_medical_conditions.dart';
 
 class DoyouknowScreen extends StatefulWidget {
@@ -55,17 +56,6 @@ class _DoyouknowScreenState extends State<DoyouknowScreen> {
                       ),
                     ),
                   ),
-                  Container(
-                    width: double.infinity,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Even ⅓rd of reduction of your goal weight ( users weight loss goal)\nyou can reduce your risks for diabetes, high blood pressure,\nhigh cholesterol, metabolicsyndrome, and heart diseases.',
-                        textAlign: TextAlign.center,
-                        style: darkText12Px,
-                      ),
-                    ),
-                  ),
                   SizedBox(height: height * .03),
                   Container(
                       height: mobile ? 300 : 250,
@@ -74,56 +64,37 @@ class _DoyouknowScreenState extends State<DoyouknowScreen> {
                         ImagePath.doYou,
                         fit: BoxFit.contain,
                       )),
-                  SizedBox(height: height * .03),
-                  Container(
-                    width: double.infinity,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                  SizedBox(height: height * .06),
+                  Padding(
+                    padding:   EdgeInsets.symmetric(horizontal: width*0.03),
+                    child: FittedBox(
                       child: Text(
                         'Here, you have 24x7 access to nutritional, exercise, and mind\n coaches who answer any of your questions 24 hours a day.\nWe work together closely to make you healthy.',
                         textAlign: TextAlign.center,
-                        style: darkText12Px,
+                        style:TextStyle(fontSize: height*.05),
                       ),
                     ),
                   ),
                 ],
               ),
+              SizedBox(height: height * .1),
               InkWell(
-                onTap: () {
-                  mobile
-                      ? Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => WeightLossJourney(
-                                signUpBody: widget.signUpBody,
-                              )))
-                      : Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 430, right: 430, top: 30, bottom: 30),
-                                child: Card(
-                                    elevation: 5,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10)),
-                                    child: WeightLossJourney(
-                                      signUpBody: widget.signUpBody,
-                                    )),
-                              )));
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>  GenderScreen () ,));
                 },
-                child: Padding(
-                  padding: const EdgeInsets.all(30.0),
-                  child: Container(
-                      width: Get.width * .6,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          color: primaryColor,
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(40.0))),
-                      child: Center(
-                        child: Text(
-                          "Next",
-                          style: buttonStyle,
-                        ),
-                      )),
+                child: Container(
+                  height: height * 0.06,
+                  width: width * 0.6,
+                  color: Colors.black,
+                  child: Center(
+                    child: Text(
+                      'Next',
+                      style: TextStyle(
+                          fontSize: height * 0.024,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ),
               ),
             ],

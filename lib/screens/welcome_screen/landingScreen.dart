@@ -5,9 +5,10 @@ import 'package:weight_loser/Model/UserDataModel.dart';
 
 import '../../Model/customer_pkgs.dart';
 import '../../notifications/getit.dart';
-import '../Questions_screen/body_type.dart';
+import '../Questions_screen/gender_quistion_screen.dart';
 import '../Questions_screen/methods/methods.dart';
 import '../Questions_screen/models/all_questions_model.dart';
+import '../Questions_screen/used-Questions/do_you_know.dart';
 import '../about_us/aboutUs.dart';
 import '../auth/authenticate/provider/authprovider.dart';
 
@@ -182,7 +183,7 @@ class _LScreenState extends State<LScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: height*0.15,
+              height: height*0.1,
 
             ),
             SizedBox(
@@ -196,8 +197,8 @@ class _LScreenState extends State<LScreen> {
             Text(
               'Weight Loser',
               style: GoogleFonts.poppins(
-                fontSize: 40,
-                fontWeight: FontWeight.w700,
+                fontSize: 34,
+                fontWeight: FontWeight.w600,
                 height: 1.25,
               ),
             ),
@@ -207,7 +208,7 @@ class _LScreenState extends State<LScreen> {
               'Plan personalized for you!',
               style: GoogleFonts.poppins(
                 fontSize: 22,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
                 height: 1.25,
               ),
             ),
@@ -215,11 +216,12 @@ class _LScreenState extends State<LScreen> {
             RichText(
                 text: TextSpan(children: [
                   TextSpan(
-                    text: 'Amit,',
+                    text: ' '
+                        'UserName,',
                     // text: widget.signUpBody.name,
                     style: GoogleFonts.openSans(
-                      fontSize: 21,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 19,
+                      fontWeight: FontWeight.w600,
                       color: Colors.black,
                     ),
                   ),
@@ -238,7 +240,7 @@ class _LScreenState extends State<LScreen> {
             SizedBox(height:  height*0.09),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const  GenderScreen(),));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => DoyouknowScreen(),));
                 // Navigator.push(
                 //   context,
                 //   MaterialPageRoute(

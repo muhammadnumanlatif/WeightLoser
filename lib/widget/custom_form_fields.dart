@@ -31,18 +31,7 @@ class CustomFormFields {
             hintStyle: TextStyle(),
             filled: true,
             fillColor: ConstantColors.WHITE_COLOR,
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(Dimensions.BORDER_RADIUS)),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: ConstantColors.GRAY,
-                width: Dimensions.BORDER_WIDTH,
-              ),
-              borderRadius: BorderRadius.circular(Dimensions.BORDER_RADIUS),
-            ),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: ConstantColors.GRAY),
-              borderRadius: BorderRadius.circular(Dimensions.BORDER_RADIUS),
             ),
           ),
           onChanged: onChange,
@@ -73,6 +62,7 @@ class CustomFormFields {
   }) {
     return Container(
       child: TextFormField(
+        style: TextStyle(color: Colors.black),
         controller: controller,
         obscureText: isObscure,
         // ignore: deprecated_member_use
@@ -82,29 +72,29 @@ class CustomFormFields {
           prefixIcon: icon,
           suffixIcon: suffixIcon,
           labelStyle: TextStyle(color: Colors.black),
-          hintStyle: TextStyle(),
-          filled: true,
-          border: OutlineInputBorder(),
-          errorText: errorText,
 
+          filled: true,
+          // border: OutlineInputBorder(),
+          errorText: errorText,
           fillColor: ConstantColors.WHITE_COLOR,
-          // border: OutlineInputBorder(
-          //     borderRadius: BorderRadius.circular(Dimensions.BORDER_RADIUS)),
-          // enabledBorder: OutlineInputBorder(
-          //   // borderSide: BorderSide(
-          //   //   color: ConstantColors.GRAY.withOpacity(0.4),
-          //   //   width: Dimensions.BORDER_WIDTH,
-          //   // ),
-          //   borderRadius: BorderRadius.circular(Dimensions.BORDER_RADIUS),
-          // ),
-          // focusedBorder: OutlineInputBorder(
-          //   borderSide: BorderSide(color: ConstantColors.GRAY),
-          //   borderRadius: BorderRadius.circular(Dimensions.BORDER_RADIUS),
-          // ),
+
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black),
+              borderRadius: BorderRadius.circular(Dimensions.BORDER_RADIUS)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color:  Colors.blue.withOpacity(0.3),
+
+            ),
+
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.blue.withOpacity(0.3),),
+
+          ),
         ),
         onChanged: onChange,
         onSaved: onSaved,
-
         onFieldSubmitted: onSubmitted,
         validator: validator,
         keyboardType: keyboardType,
